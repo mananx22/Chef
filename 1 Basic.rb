@@ -5,3 +5,10 @@ end
 service 'httpd' do
     action [:enable, :start]
 end
+
+file '/var/www/index.html' do
+    content 'Hello Manan'
+    mode '0755'
+    owner 'root'
+    group 'apache'
+end
